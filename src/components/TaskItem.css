@@ -1,0 +1,130 @@
+.task-item {
+  width: 80%;
+  padding: 2vh;
+  margin: auto;
+  margin-top: 1vh;
+  margin-bottom:1vh;
+  background: #c02e4ef6;
+  border-radius: 7px;
+  box-shadow: rgba(88, 74, 74, 0.24) 0px 3px 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-details {
+  display: flex;
+  align-items: center;
+}
+
+.task-item label {
+  font-size: 1.5em;
+  margin-left: 1vw;
+  margin-bottom: 3.5px;
+  cursor: pointer;
+}
+
+.task-item input[type="checkbox"] {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 4px;
+  border: 2px solid black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-item input[type="checkbox"]:checked,
+.task-item input[type="checkbox"]:checked:hover {
+  background: #5bcd3e;
+}
+
+.task-item input[type="checkbox"]:hover {
+  background: rgb(170, 166, 166);
+}
+
+.task-item input[type="checkbox"]:checked::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  font-size: 18px;
+  color: white;
+}
+
+.delete-task {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-task::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00d";
+  font-weight: 900;
+  font-size: 23px;
+  color: rgb(165, 45, 45);
+}
+
+.delete-task:hover {
+  background: #b9b2ae;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.opacity label {
+  text-decoration: line-through;
+}
+
+@media (max-width: 770px) {
+    .task-item label {
+        margin-left: 1.2vw;
+        margin-bottom: 2px;
+    }
+    
+    .task-item { 
+        width: 100%;
+        max-height:inherit;
+    }
+
+    .task-item input[type="checkbox"] {
+        min-width: 20px;
+        min-height:20px;
+        max-width: 22px;
+        max-height:22px;
+    }
+
+    .task-item input[type="checkbox"]:checked::after {
+        font-size: 13px;
+    }
+    
+    .delete-task {
+        min-width: 22px;
+        min-height: 22px;
+    }
+    .delete-task::after {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:500px){
+    .task-item label {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width:350px) {
+    .task-item label {
+        font-size: 1em;
+    }
+}
